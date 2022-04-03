@@ -175,11 +175,11 @@ with tf.Session() as sess:
         patches_coord=None, write_index = False , is_valid = is_valid)
 
 # If validation, print or save the metrics between ground-truth and predictions
-if is_valid:
-    gt_coords = pred_data.df[pred_data.coords_cols].values
-        # Calculate metrics for points only
-    diff_per_pt ,pck= pck_accuracy(pred_coords , gt_coords,
-        lm_cnt = pred_data.lm_cnt , pck_threshold = params['pck_threshold'],scale = 1)
-    print(diff_per_pt ,pck)
+# if is_valid:
+#     gt_coords = pred_data.df[pred_data.coords_cols].values
+#         # Calculate metrics for points only
+#     diff_per_pt ,pck= pck_accuracy(pred_coords , gt_coords,
+#         lm_cnt = pred_data.lm_cnt , pck_threshold = params['pck_threshold'],scale = 1)
+#     print(diff_per_pt ,pck)
 
-    #Write the Evaluation result
+#     #Write the Evaluation result
